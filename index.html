@@ -10,6 +10,18 @@
 <ul>
 <li> <img src="https://i1.wp.com/i.imgur.com/b24ROZK.jpg?zoom=2&resize=700%2C467&ssl=1">
 <li> <a href="https://www.d3-graph-gallery.com/graph/histogram_basic.html">Animated Graph </a> </li>
+<li>We have a basic graph about pet statistics.  There is nothing special about the graph except that it lays sideways.  This is
+  done with the following code</li>
+<li><pre>  bars.append("rect")
+            .attr("class", "bar")
+            .attr("y", function (d) {
+                return y(d.name);
+            })
+            .attr("height", y.rangeBand())
+            .attr("x", 0)
+            .attr("width", function (d) {
+                return x(d.value);
+                </pre></li>
   
 </ul>
 </p>
